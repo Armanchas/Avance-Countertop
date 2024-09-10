@@ -1,0 +1,90 @@
+body {
+	font-family: Inter;
+	background-color: rgba(240, 235, 225, 1);
+}
+
+.navbar {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem 1rem;
+	margin: 1rem 0rem;
+	border: 1px solid rgba(0, 0, 0, 1);
+	border-radius: 30px;
+}
+
+.logo {
+	width: 50px;
+	border-radius: 9999px;
+}
+
+.navbar-group {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+}
+
+.navbar-link {
+	font-weight: 700;
+	font-size: 18px;
+}
+
+.login-button {
+	color: rgba(255, 255, 255, 1);
+	background-color: rgba(38, 37, 34, 1);
+	padding: 0.5rem 0.75rem;
+	border-radius: 9999px;
+	font-weight: 700;
+}
+.login-button:hover {
+	background-color: rgba(38, 37, 34, 0.9);
+}
+
+.navbar-link-active {
+	text-decoration: underline black 2px;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.banner-container {
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.banner-text {
+	position: absolute;
+	color: rgba(255, 255, 255, 1);
+	font-size: 2rem;
+	font-weight: 800;
+	padding: 0 400px;
+	text-align: center;
+}
+
+.banner {
+	border-radius: 30px;
+	object-fit: cover;
+	width: 100%;
+	height: 300px;
+	filter: brightness(0.4);
+}
+
+.boxes-container {
+	display: grid;
+	grid-template-columns: 1.25fr 0.75fr;
+	gap: 40px;
+	margin: 1rem 0;
+}
+
+.box {
+	background-color: rgba(182, 176, 164, 1);
+	border-radius: 30px;
+	height: 400px;
+}
