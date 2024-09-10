@@ -97,3 +97,7 @@ body {
     text-align: center;
     cursor: pointer;
 }
+
+.back-button:hover {
+    background-color: rgba(38, 37, 34, 0.9);
+}
