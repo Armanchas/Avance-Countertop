@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="assets/reset.css" />
+		<link rel="stylesheet" href="assets/post.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Countertop</title>
+	</head>
+	<body class="container">
+		<header>
+			<nav class="navbar">
+				<div class="navbar-group">
+					<img
+						src="assets/images/logo.jpeg"
+						alt="Logo"
+						class="logo"
+					/>
+					<a class="navbar-link" href="tips.html">Cooking tips</a>
+				</div>
+				<a class="navbar-link" href="index.html">Home</a>
+				<a class="navbar-link" href="browse.html">Browse</a>
+				<a class="navbar-link navbar-link-active" href=""
+					>Post recipe</a
+				>
+				<a class="login-button" href="login.html">Sign up / Log in</a>
+			</nav>
+		</header>
+		<main class="box">
+			<h1>Write your own recipe!</h1>
+			<form class="form-container">
+				<div class="form-elements">
+					<div class="input-group">
+						<div class="input-and-label">
+							<label for="recipe-title">Title</label>
+							<input
+								type="text"
+								id="recipe-title"
+								name="recipe-title"
+								required
+							/>
+						</div>
+						<div class="input-and-label">
+							<label for="ingredients">Ingredients</label>
+							<input
+								type="text"
+								id="ingredients"
+								name="ingredients"
+								required
+							/>
+						</div>
+						<div class="input-and-label">
+							<label for="cook-time">Cook time</label>
+							<input
+								type="text"
+								id="cook-time"
+								name="cook-time"
+								required
+							/>
+						</div>
+					</div>
+					<div class="upload-image">
+						<label for="recipe-image">Upload image</label>
+						<input
+							type="file"
+							id="recipe-image"
+							name="recipe-image"
+							accept="image/*"
+							required
+						/>
+					</div>
+				</div>
+				<div class="input-and-label">
+					<label for="instructions">Instructions</label>
+					<textarea
+						id="instructions"
+						name="instructions"
+						required
+					></textarea>
+				</div>
+				<div class="post-button-container">
+					<a href="recipe.html" class="submit-recipe">Post recipe!</a>
+				</div>
+			</form>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="assets/reset.css" />
+		<link rel="stylesheet" href="assets/browse.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Countertop</title>
+	</head>
+	<body class="container">
+		<header>
+			<nav class="navbar">
+				<div class="navbar-group">
+					<img
+						src="assets/images/logo.jpeg"
+						alt="Logo"
+						class="logo"
+					/>
+					<a class="navbar-link" href="tips.html">Cooking tips</a>
+				</div>
+				<a class="navbar-link" href="index.html">Home</a>
+				<a class="navbar-link navbar-link-active" href="">Browse</a>
+				<a class="navbar-link" href="post.html">Post recipe</a>
+				<a class="login-button" href="login.html">Sign up / Log in</a>
+			</nav>
+		</header>
+		<main class="box">
+			<div class="search-header">
+				<h1 class="search-title">Browse recipes</h1>
+				<div class="search-group">
+					<button class="button">Filter</button>
+					<button class="button">Sort</button>
+					<input
+						class="query-input"
+						placeholder="Search"
+						type="text"
+						name="query"
+					/>
+				</div>
+			</div>
+			<div>
+				<div class="divider"></div>
+				<div class="recipe-container">
+					<img
+						class="recipe-thumbnail"
+						src="assets/images/taco-thumbnail.jpg"
+						alt="An image of some tacos"
+					/>
+					<div class="recipe-description">
+						<h2 class="recipe-title">Quick and easy tacos</h2>
+						<p>Cook time: ~30min</p>
+					</div>
+				</div>
+				<div class="divider"></div>
+				<div class="recipe-container">
+					<img
+						class="recipe-thumbnail"
+						src="assets/images/pancake-thumbnail.jpg"
+						alt="An image of some tacos"
+					/>
+					<div class="recipe-description">
+						<h2 class="recipe-title">Fluffy American Pancakes</h2>
+						<p>Cook time: ~20min</p>
+					</div>
+				</div>
+				<div class="divider"></div>
+			</div>
+		</main>
+	</body>
+</html>
