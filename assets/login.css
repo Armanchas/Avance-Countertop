@@ -67,6 +67,7 @@ body {
 	width: 100%;
 	text-align: center;
 	cursor: pointer;
+	display: block;
 }
 .login-button:hover {
 	background-color: rgba(38, 37, 34, 0.9);
