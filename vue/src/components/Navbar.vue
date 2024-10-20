@@ -11,7 +11,7 @@ import RouterButton from "@/components/RouterButton.vue";
 			<RouterLink to="/">Home</RouterLink>
 			<RouterLink to="/">Browse</RouterLink>
 			<RouterLink to="/">Post recipe</RouterLink>
-			<RouterButton to="/">Sign up / Log in</RouterButton>
+			<RouterButton to="/login">Sign up / Log in</RouterButton>
 		</nav>
 	</header>
 </template>
