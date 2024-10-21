@@ -20,7 +20,7 @@ const props = defineProps({
 		<img
 			:src="props.recipe.images.thumbnail.url"
 			:alt="props.recipe.images.thumbnail.alt"
-			class="h-[75px] w-[75px] rounded-3xl"
+			class="h-[100px] w-[100px] rounded-3xl"
 		/>
 		<div>
 			<RouterLink

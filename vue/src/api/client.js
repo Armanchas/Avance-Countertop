@@ -54,7 +54,7 @@
 export async function getAllRecipes() {
 	let res;
 	try {
-		res = await fetch("http://localhost:3001/recipes");
+		res = await fetch(`${import.meta.env.VITE_API_URL}/recipes`);
 	} catch (err) {
 		console.error("Failed to fetch recipes", err);
 		return [];
@@ -83,7 +83,9 @@ export async function getAllRecipes() {
 export async function getRecipeById(recipeId) {
 	let res;
 	try {
-		res = await fetch(`http://localhost:3001/recipes/${recipeId}`);
+		res = await fetch(
+			`${import.meta.env.VITE_API_URL}/recipes/${recipeId}`,
+		);
 	} catch (err) {
 		console.error("Failed to fetch recipe", err);
 		return null;
@@ -113,7 +115,9 @@ export async function getRecipeById(recipeId) {
 export async function getRecipesByUserId(userId) {
 	let res;
 	try {
-		res = await fetch(`http://localhost:3001/recipes?user_id=${userId}`);
+		res = await fetch(
+			`${import.meta.env.VITE_API_URL}/recipes?user_id=${userId}`,
+		);
 	} catch (err) {
 		console.error("Failed to fetch recipes", err);
 		return [];
@@ -133,4 +137,30 @@ export async function getRecipesByUserId(userId) {
 	}
 
 	return data;
+}
+
+/**
+ * @param {string} query
+ * @param {string[]} categories
+ */
+export async function searchRecipes(query, categories) {
+	const recipes = await getAllRecipes();
+
+	const filtered = recipes.filter((recipe) => {
+		const hasQuery = recipe.title
+			.toLowerCase()
+			.includes(query.toLowerCase());
+		const hasCategories =
+			categories.length !== 0
+				? categories.every((category) =>
+						recipe.categories.includes(category),
+					)
+				: true;
+
+		return hasQuery && hasCategories;
+	});
+
+	console.log(filtered)
+
+	return filtered;
 }

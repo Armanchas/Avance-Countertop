@@ -9,3 +9,21 @@ export function formatIngredientToString(ingredient) {
 
 	return `${ingredient.amount} ${ingredient.measurement}${ingredient.amount > 1 ? "s" : ""} of ${ingredient.name}`;
 }
+
+/**
+ * @param {Function} func
+ * @param {number} wait
+ * @returns {Function}
+ */
+export function debounce(func, wait) {
+	let timer;
+	return function (...args) {
+		if (timer) {
+			clearTimeout(timer);
+		}
+		const context = this;
+		timer = setTimeout(() => {
+			func.apply(context, args);
+		}, wait);
+	};
+}

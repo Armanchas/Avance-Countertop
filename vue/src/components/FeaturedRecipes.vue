@@ -3,6 +3,14 @@ import Box from "@/components/Box.vue";
 import Divider from "./Divider.vue";
 import FeaturedRecipeItem from "./FeaturedRecipeItem.vue";
 
+/**
+ * @typedef {Object} Props
+ * @prop {import("@/api/client").Recipe[]} recipes
+ */
+
+/**
+ * @type {Props}
+ */
 const props = defineProps({
 	recipes: {
 		type: Array,

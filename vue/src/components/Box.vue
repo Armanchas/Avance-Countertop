@@ -37,7 +37,7 @@ const props = defineProps({
 		:class="
 			clsx(
 				'rounded-3xl p-4',
-				props.bgColor ? props.bgColor : 'bg-[#B6B0A4]',
+				props.bgColor ? props.bgColor : 'bg-stone-400',
 			)
 		"
 	>
@@ -47,7 +47,7 @@ const props = defineProps({
 					props.centered && 'text-center',
 					props.titleStyles
 						? props.titleStyles
-						: 'text-xl font-bold text-white underline',
+						: 'text-2xl font-bold text-white underline',
 				)
 			"
 		>
