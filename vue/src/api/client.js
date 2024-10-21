@@ -54,7 +54,7 @@
 export async function getAllRecipes() {
 	let res;
 	try {
-		res = await fetch("http://localhost:3000/recipes");
+		res = await fetch("http://localhost:3001/recipes");
 	} catch (err) {
 		console.error("Failed to fetch recipes", err);
 		return [];
@@ -65,7 +65,15 @@ export async function getAllRecipes() {
 		return [];
 	}
 
-	return await res.json();
+	let data;
+	try {
+		data = await res.json();
+	} catch (err) {
+		console.error("Failed to receive and parse JSON", err);
+		return [];
+	}
+
+	return data;
 }
 
 /**
@@ -73,13 +81,28 @@ export async function getAllRecipes() {
  * @returns {Promise<Recipe>}
  */
 export async function getRecipeById(recipeId) {
-	const res = await fetch(`http://localhost:3000/recipes/${recipeId}`);
-
-	if (!res.ok) {
-		throw new Error("Failed to fetch recipe");
+	let res;
+	try {
+		res = await fetch(`http://localhost:3001/recipes/${recipeId}`);
+	} catch (err) {
+		console.error("Failed to fetch recipe", err);
+		return null;
 	}
 
-	return await res.json();
+	if (!res.ok) {
+		console.error("Failed to fetch recipe", res.status, res.statusText);
+		return null;
+	}
+
+	let data;
+	try {
+		data = await res.json();
+	} catch (err) {
+		console.error("Failed to receive and parse JSON", err);
+		return null;
+	}
+
+	return data;
 }
 
 /**
@@ -88,11 +111,26 @@ export async function getRecipeById(recipeId) {
  * @returns {Promise<Recipe[]>}
  */
 export async function getRecipesByUserId(userId) {
-	const res = await fetch(`http://localhost:3000/recipes?user_id=${userId}`);
-
-	if (!res.ok) {
-		throw new Error("Failed to fetch recipes");
+	let res;
+	try {
+		res = await fetch(`http://localhost:3001/recipes?user_id=${userId}`);
+	} catch (err) {
+		console.error("Failed to fetch recipes", err);
+		return [];
 	}
 
-	return await res.json();
+	if (!res.ok) {
+		console.error("Failed to fetch recipes", res.status, res.statusText);
+		return [];
+	}
+
+	let data;
+	try {
+		data = await res.json();
+	} catch (err) {
+		console.error("Failed to receive and parse JSON", err);
+		return [];
+	}
+
+	return data;
 }

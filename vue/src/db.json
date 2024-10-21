@@ -14,11 +14,11 @@
 			"images": {
 				"main": {
 					"url": "https://i.imgur.com/C36PGmK.jpeg",
-					"alt": "Spaghetti Carbonara"
+					"alt": "Poggers"
 				},
 				"thumbnail": {
 					"url": "https://i.imgur.com/C36PGmK.jpeg",
-					"alt": "Spaghetti Carbonara"
+					"alt": "Poggers"
 				}
 			},
 			"categories": ["lunch"],
@@ -27,30 +27,30 @@
 				{
 					"name": "Spaghetti",
 					"amount": 200,
-					"measurement": "grams"
+					"measurement": "gram"
 				},
 				{
 					"name": "Egg",
 					"amount": 2,
-					"measurement": "units"
+					"measurement": null
 				},
 				{
 					"name": "Pancetta",
 					"amount": 100,
-					"measurement": "grams"
+					"measurement": "gram"
 				},
 				{
 					"name": "Parmesan",
 					"amount": 50,
-					"measurement": "grams"
+					"measurement": "gram"
 				},
 				{
 					"name": "Black Pepper",
 					"amount": 1,
-					"measurement": "teaspoons"
+					"measurement": "teaspoon"
 				}
 			],
-			"steps": [
+			"instructions": [
 				{
 					"order": 1,
 					"description": "Cook the spaghetti in a large pot of boiling salted water until al dente."
@@ -101,32 +101,32 @@
 				{
 					"name": "Chicken Breast",
 					"amount": 2,
-					"measurement": "units"
+					"measurement": null
 				},
 				{
 					"name": "Fettuccine",
 					"amount": 250,
-					"measurement": "grams"
+					"measurement": "gram"
 				},
 				{
 					"name": "Heavy Cream",
 					"amount": 200,
-					"measurement": "milliliters"
+					"measurement": "milliliter"
 				},
 				{
 					"name": "Parmesan Cheese",
 					"amount": 100,
-					"measurement": "grams"
+					"measurement": "gram"
 				},
 				{
 					"name": "Garlic",
 					"amount": 2,
-					"measurement": "cloves"
+					"measurement": "clove"
 				},
 				{
 					"name": "Butter",
 					"amount": 2,
-					"measurement": "tablespoons"
+					"measurement": "tablespoon"
 				},
 				{
 					"name": "Salt",
@@ -139,7 +139,7 @@
 					"measurement": "teaspoon"
 				}
 			],
-			"steps": [
+			"instructions": [
 				{
 					"order": 1,
 					"description": "Cook the fettuccine according to package instructions."
