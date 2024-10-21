@@ -1,12 +1,12 @@
-<script setup lang="ts">
-import Navbar from "@/components/Navbar.vue";
+<script setup>
+import Navbar from "./Navbar.vue";
 </script>
 
 <template>
-    <div class="h-screen bg-[#F0EBE1]">
-        <div class="container m-auto">
-            <Navbar />
-            <slot />
-        </div>
-    </div>
+	<div class="h-screen">
+		<div class="m-auto max-w-[1200px]">
+			<Navbar />
+			<slot />
+		</div>
+	</div>
 </template>

@@ -4,7 +4,7 @@ import RouterButton from "@/components/RouterButton.vue";
 </script>
 
 <template>
-	<header class="p-3">
+	<header class="py-3">
 		<nav class="flex justify-between p-2 border-2 border-stone-900 rounded-full text-justify items-center font-semibold">
 			<img src="@/assets/images/logo.jpeg" alt="Logo" class="mx-2 w-12 rounded-full" />
 			<RouterLink to="/">Cooking tips</RouterLink>

@@ -4,7 +4,7 @@ import RouterButton from "@/components/RouterButton.vue";
 </script>
 
 <template>
-	<main class="h-max bg-[#F0EBE1]">
+	<main class="h-max">
 		<div>
 			<div class="flex p-5 absolute">
 				<RouterButton to="/" class="w-32">Back</RouterButton>

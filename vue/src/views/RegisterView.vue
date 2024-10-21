@@ -1,10 +1,9 @@
 <script setup>
-import { RouterLink } from "vue-router";
 import RouterButton from "@/components/RouterButton.vue";
 </script>
 
 <template>
-	<main class="h-max bg-[#F0EBE1]">
+	<main class="h-max">
 		<div>
 			<div class="flex p-5 absolute">
 				<RouterButton to="/" class="w-32">Back</RouterButton>
@@ -31,7 +30,7 @@ import RouterButton from "@/components/RouterButton.vue";
 							<label class="text-white font-semibold p-2" for="username">Email</label>
 							<input
 								class="border border-stone-900 rounded-2xl p-2"
-								placeholder="email..."
+								placeholder="Email..."
 								type="text"
 								name="email"
 							/>
