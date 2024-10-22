@@ -174,6 +174,7 @@ export async function postRecipe(recipe) {
 	const lastID = (await getAllRecipes()).toSorted((a, b) => b.id - a.id)[0]?.id ?? 0;
 	console.log(lastID);
 	recipe.id = Number(lastID) + 1;
+	recipe.id = recipe.id.toString();
 	const res = await fetch(`${import.meta.env.VITE_API_URL}/recipes`, {
 		method: "POST",
 		headers: {

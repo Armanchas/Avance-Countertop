@@ -171,148 +171,105 @@
       ]
     },
     {
-      "id": 3,
-      "ingredients": [],
-      "instructions": [],
-      "title": "a",
+      "id": "3",
+      "user_id": 1,
+      "title": "nuclear bomb",
       "images": {
         "main": {
-          "url": "https://arminup.pancho.moe/dc7f409dce6109f0e9609ad78fb0fe86",
-          "alt": "a"
+          "url": "https://arminup.pancho.moe/1b44ad9a4a27206ba9907616e58c81bb",
+          "alt": "nuclear bomb"
         },
         "thumbnail": {
-          "url": "https://arminup.pancho.moe/dc7f409dce6109f0e9609ad78fb0fe86",
-          "alt": "a"
+          "url": "https://arminup.pancho.moe/1b44ad9a4a27206ba9907616e58c81bb",
+          "alt": "nuclear bomb"
         }
       },
-      "cook_time_minutes": 2,
-      "categories": []
+      "categories": [
+        "lunch"
+      ],
+      "cook_time_minutes": 5,
+      "ingredients": [
+        {
+          "name": "uranium",
+          "amount": "2",
+          "measurement": "gram"
+        }
+      ],
+      "instructions": [
+        {
+          "description": "make bomb",
+          "order": 1
+        }
+      ]
     },
     {
-      "id": 4,
-      "ingredients": [],
-      "instructions": [],
-      "title": "a",
+      "id": "4",
+      "user_id": 1,
+      "title": "mika",
       "images": {
         "main": {
-          "url": "https://arminup.pancho.moe/dc7f409dce6109f0e9609ad78fb0fe86",
-          "alt": "a"
+          "url": "https://arminup.pancho.moe/f5e3a6097d1d7972ee12a8abae859e7e",
+          "alt": "mika"
         },
         "thumbnail": {
-          "url": "https://arminup.pancho.moe/dc7f409dce6109f0e9609ad78fb0fe86",
-          "alt": "a"
+          "url": "https://arminup.pancho.moe/f5e3a6097d1d7972ee12a8abae859e7e",
+          "alt": "mika"
         }
       },
-      "cook_time_minutes": 2,
-      "categories": []
+      "categories": "Snack",
+      "cook_time_minutes": 10,
+      "ingredients": [
+        {
+          "name": "mika",
+          "amount": "1",
+          "measurement": ""
+        }
+      ],
+      "instructions": [
+        {
+          "description": "mika",
+          "order": 1
+        }
+      ]
     },
     {
-      "id": 5,
-      "ingredients": [],
-      "instructions": [],
-      "title": "a",
+      "id": "5",
+      "user_id": 1,
+      "title": "hare",
       "images": {
         "main": {
-          "url": "https://arminup.pancho.moe/dc7f409dce6109f0e9609ad78fb0fe86",
-          "alt": "a"
+          "url": "https://arminup.pancho.moe/fd481db70dd7767e1d36cf4794185144",
+          "alt": "hare"
         },
         "thumbnail": {
-          "url": "https://arminup.pancho.moe/dc7f409dce6109f0e9609ad78fb0fe86",
-          "alt": "a"
+          "url": "https://arminup.pancho.moe/fd481db70dd7767e1d36cf4794185144",
+          "alt": "hare"
         }
       },
-      "cook_time_minutes": 2,
-      "categories": []
-    },
-    {
-      "id": 6,
-      "ingredients": [],
-      "instructions": [],
-      "title": "a",
-      "images": {
-        "main": {
-          "url": "https://arminup.pancho.moe/dc7f409dce6109f0e9609ad78fb0fe86",
-          "alt": "a"
+      "categories": "Breakfast",
+      "cook_time_minutes": 0,
+      "ingredients": [
+        {
+          "name": "buzzwords",
+          "amount": "50",
+          "measurement": ""
         },
-        "thumbnail": {
-          "url": "https://arminup.pancho.moe/dc7f409dce6109f0e9609ad78fb0fe86",
-          "alt": "a"
+        {
+          "name": "energy drinks",
+          "amount": "20",
+          "measurement": "liter"
         }
-      },
-      "cook_time_minutes": 2,
-      "categories": []
-    },
-    {
-      "id": 7,
-      "ingredients": [],
-      "instructions": [],
-      "title": "a",
-      "images": {
-        "main": {
-          "url": "https://arminup.pancho.moe/dc7f409dce6109f0e9609ad78fb0fe86",
-          "alt": "a"
+      ],
+      "instructions": [
+        {
+          "description": "give her energy drinks",
+          "order": 1
         },
-        "thumbnail": {
-          "url": "https://arminup.pancho.moe/dc7f409dce6109f0e9609ad78fb0fe86",
-          "alt": "a"
+        {
+          "description": "repeat",
+          "order": 2
         }
-      },
-      "cook_time_minutes": 2,
-      "categories": []
-    },
-    {
-      "id": 8,
-      "ingredients": [],
-      "instructions": [],
-      "title": "a",
-      "images": {
-        "main": {
-          "url": "https://arminup.pancho.moe/dc7f409dce6109f0e9609ad78fb0fe86",
-          "alt": "a"
-        },
-        "thumbnail": {
-          "url": "https://arminup.pancho.moe/dc7f409dce6109f0e9609ad78fb0fe86",
-          "alt": "a"
-        }
-      },
-      "cook_time_minutes": 2,
-      "categories": []
-    },
-    {
-      "id": 9,
-      "ingredients": [],
-      "instructions": [],
-      "title": "a",
-      "images": {
-        "main": {
-          "url": "https://arminup.pancho.moe/dc7f409dce6109f0e9609ad78fb0fe86",
-          "alt": "a"
-        },
-        "thumbnail": {
-          "url": "https://arminup.pancho.moe/dc7f409dce6109f0e9609ad78fb0fe86",
-          "alt": "a"
-        }
-      },
-      "cook_time_minutes": 2,
-      "categories": []
-    },
-    {
-      "id": 10,
-      "ingredients": [],
-      "instructions": [],
-      "title": "a",
-      "images": {
-        "main": {
-          "url": "https://arminup.pancho.moe/dc7f409dce6109f0e9609ad78fb0fe86",
-          "alt": "a"
-        },
-        "thumbnail": {
-          "url": "https://arminup.pancho.moe/dc7f409dce6109f0e9609ad78fb0fe86",
-          "alt": "a"
-        }
-      },
-      "cook_time_minutes": 2,
-      "categories": []
+      ]
     }
   ]
 }

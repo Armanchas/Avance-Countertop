@@ -5,8 +5,7 @@ import MainLayout from '@/components/MainLayout.vue';
 import Box from '@/components/Box.vue';
 
 const recipe = reactive({
-    ingredients: [],
-    instructions: [],
+    user_id: 1,
     title: '',
     images: {
         main: {
@@ -18,8 +17,10 @@ const recipe = reactive({
             alt: ''
         }
     },
-    cook_time_minutes: 0,
     categories: [],
+    cook_time_minutes: 0,
+    ingredients: [],
+    instructions: [],
 });
 
 const image = ref();
@@ -108,7 +109,7 @@ const onSubmit = async (event) => {
                             <label class="py-2 font-semibold">Amount:</label>
                             <input v-model="ingredient.amount" placeholder="amount of ingredient" class="border border-stone-900 rounded-2xl p-2 text-black" type="text" :name="'ingredient-amount-'+ index" required/>
                             <label class="py-2 font-semibold">Measurement:</label>
-                            <input v-model="ingredient.measurement" placeholder="gram, liter, kg..." class="border border-stone-900 rounded-2xl p-2 text-black" type="text" :name="'ingredient-measurement-'+ index" required/>
+                            <input v-model="ingredient.measurement" placeholder="gram, liter, kg..." class="border border-stone-900 rounded-2xl p-2 text-black" type="text" :name="'ingredient-measurement-'+ index"/>
                             <button @click="removeIngredient(index)" class="absolute top-9 right-0 bg-stone-950 hover:bg-stone-800 text-white rounded-full w-6 h-6 flex items-center justify-center">x</button>
                         </div>
                     </div>
