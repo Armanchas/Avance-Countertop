@@ -18,7 +18,7 @@ const props = defineProps({
 </script>
 
 <template>
-	<Box title="Instructions" bg-color="bg-[#757169]">
+	<Box title="Instructions" bg-color="bg-stone-500">
 		<ol class="max-h-[300px] list-inside list-decimal overflow-y-auto pt-4">
 			<li
 				v-for="(instruction, index) in props.instructions.toSorted(

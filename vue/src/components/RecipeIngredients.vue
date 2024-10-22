@@ -19,7 +19,7 @@ const props = defineProps({
 </script>
 
 <template>
-	<Box title="Ingredients" bg-color="bg-[#757169]">
+	<Box title="Ingredients" bg-color="bg-stone-500">
 		<ul class="list-inside list-disc overflow-y-auto pt-4 max-h-[400px]">
 			<li
 				v-for="(ingredient, index) in props.ingredients"
