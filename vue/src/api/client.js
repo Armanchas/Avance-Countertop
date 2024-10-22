@@ -164,3 +164,50 @@ export async function searchRecipes(query, categories) {
 
 	return filtered;
 }
+
+/**
+ * @param {Recipe} recipe
+ * @returns {Promise<Recipe>}
+ */
+export async function postRecipe(recipe) {
+	
+	const lastID = (await getAllRecipes()).toSorted((a, b) => b.id - a.id)[0]?.id ?? 0;
+	console.log(lastID);
+	recipe.id = Number(lastID) + 1;
+	const res = await fetch(`${import.meta.env.VITE_API_URL}/recipes`, {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify(recipe),
+	});
+
+	if (!res.ok) {
+		console.error("Failed to post recipe", res.status, res.statusText);
+		return null;
+	}
+
+	const data = await res.json();
+
+	return data;
+}
+
+export async function uploadFile(file) {
+	const formData = new FormData();
+	formData.append("file", file);
+
+	const res = await fetch(`https://arminup.pancho.moe/upload`, {
+		method: "POST",
+		body: formData,
+	});
+
+	if (!res.ok) {
+		console.error("Failed to upload file", res.status, res.statusText);
+		return null;
+	}
+
+	const data = await res.json();
+
+	return "https://arminup.pancho.moe/" + data.id;
+
+}
