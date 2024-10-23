@@ -13,7 +13,7 @@ import RouterButton from "@/components/RouterButton.vue";
 				alt="Logo"
 				class="mx-2 w-12 rounded-full"
 			/>
-			<RouterLink to="/">Cooking tips</RouterLink>
+			<RouterLink to="/tips">Cooking tips</RouterLink>
 			<RouterLink to="/">Home</RouterLink>
 			<RouterLink to="/search">Browse</RouterLink>
 			<RouterLink to="/post">Post recipe</RouterLink>

@@ -5,6 +5,7 @@ import RegisterView from "@/views/RegisterView.vue";
 import RecipeView from "@/views/RecipeView.vue";
 import SearchView from "@/views/SearchView.vue";
 import PostView from "@/views/PostView.vue";
+import CookingTipsView from "@/views/CookingTipsView.vue";
 
 
 const router = createRouter({
@@ -39,6 +40,11 @@ const router = createRouter({
 			path: "/post",
 			name: "post",
 			component: PostView,
+		},
+		{
+			path: "/tips",
+			name: "tips",
+			component: CookingTipsView,
 		}
 
 	],
