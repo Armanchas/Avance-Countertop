@@ -305,6 +305,10 @@ export async function getAllUsers() {
 	return data;
 }
 
+/**
+ * @param {string} username
+ * @returns {Promise<User>}
+ */
 export async function getUserByUsername(username) {
 	let res;
 	try {
@@ -332,6 +336,7 @@ export async function getUserByUsername(username) {
 
 	return data[0];
 }
+
 
 export async function loginUser(username, password) {
 
@@ -372,4 +377,47 @@ export async function logoutUser() {
 	})
 
 	localStorage.removeItem('userStore');
+}
+
+export async function getUserById(userId) {
+	let res;
+	try {
+		res = await fetch(
+			`${import.meta.env.VITE_API_URL}/users/${userId}`,
+		);
+	} catch (err) {
+		console.error("Failed to fetch user", err);
+		return null;
+	}
+
+	if (!res.ok) {
+		console.error("Failed to fetch user", res.status, res.statusText);
+		return null;
+	}
+
+	let data;
+	try {
+		data = await res.json();
+	} catch (err) {
+		console.error("Failed to receive and parse JSON", err);
+		return null;
+	}
+
+	return data;
+}
+
+export async function deleteUser(userId) {
+	const res = await fetch(
+		`${import.meta.env.VITE_API_URL}/users/${userId}`,
+		{
+			method: "DELETE",
+		},
+	);
+
+	if (!res.ok) {
+		console.error("Failed to delete user", res.status, res.statusText);
+		return false;
+	}
+
+	return true;
 }

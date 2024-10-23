@@ -37,10 +37,8 @@ watch(async () => {
 			<div class="flex justify-between">
 				<h1 class="pl-2 text-xl font-bold text-white">Search</h1>
 				<form @submit="onSearchSubmit" class="flex gap-4">
-					<Button>Filter</Button>
-					<Button>Sort</Button>
 					<input
-						class="rounded-full px-4"
+						class="rounded-full p-2 border border-stone-800"
 						placeholder="Search"
 						name="query"
 						:value="$route.query.query"

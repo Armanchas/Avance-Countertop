@@ -23,8 +23,9 @@ const onSubmit = async (event) => {
 	console.log(response);
 	if (!response){
 		error.value = "Username or password are incorrect";
+	} else {
+		router.push("/");
 	}
-	router.push("/");
 }
 
 </script>
@@ -68,7 +69,7 @@ const onSubmit = async (event) => {
 						</div>
 					</div>
 					<div class="flex flex-col justify-center items-center">
-						<p v-if="error" class="text-red-600">{{ error }}</p>
+						<p v-if="error" class="text-red-600 pb-6">{{ error }}</p>
 						<button type="submit" class="w-32 flex items-center justify-center rounded-full bg-stone-950 px-3 py-2 font-bold text-white transition-colors hover:bg-stone-950/90"
 							>Log in</button
 						>

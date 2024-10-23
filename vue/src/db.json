@@ -5,8 +5,8 @@
       "username": "armanchas",
       "email": "arminhucke@gmail.com",
       "hashed_password": "$2a$10$WCNXOJJZ6LtwOSFICIMesunzaRlYKRW/JyLqL5Y30V56YNCHQy5ge",
-      "profile-picture": {
-        "url": "https://deployer.pancho.moe/1b44ad9a4a27206ba9907616e58c81bb"
+      "profile_picture": {
+        "url": ""
       }
     },
     {
@@ -17,15 +17,6 @@
         "url": ""
       },
       "hashed_password": "$2a$10$pCOjVnO2/BqBv3pAqCBZceiYvkI9muHC/5nw2xumkWy3TXVCx.hIK"
-    },
-    {
-      "id": "3",
-      "username": "test",
-      "email": "test@test.test",
-      "profile_picture": {
-        "url": ""
-      },
-      "hashed_password": "$2a$10$VwrsbIGgoKSRTG1RcEtbeOyJpENPYxDbpJQdEPM44h1vy4lhzUzn."
     }
   ],
   "recipes": [
@@ -189,36 +180,6 @@
         {
           "order": 6,
           "description": "Slice the cooked chicken and serve on top of the fettuccine. Enjoy!"
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "user_id": "3",
-      "title": "nuclear bomb",
-      "images": {
-        "main": {
-          "url": "https://deployer.pancho.moe/385b2d8ec4d353ab460290dcecb082b5",
-          "alt": "nuclear bomb"
-        },
-        "thumbnail": {
-          "url": "https://deployer.pancho.moe/385b2d8ec4d353ab460290dcecb082b5",
-          "alt": "nuclear bomb"
-        }
-      },
-      "categories": "Snack",
-      "cook_time_minutes": 5,
-      "ingredients": [
-        {
-          "name": "uranium",
-          "amount": "20",
-          "measurement": "gram"
-        }
-      ],
-      "instructions": [
-        {
-          "description": "assemble bomb",
-          "order": 1
         }
       ]
     }

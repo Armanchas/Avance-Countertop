@@ -35,10 +35,9 @@ const logOutButton = () => {
                         <p class=" text-white text-xl">{{ user.email }}</p> 
                     </div>
                     <div class="flex flex-col">
-                        <div class="p-32 rounded-full">
+                        <div class=" p-16 rounded-full">
                             <img src="../assets/images/user.png" alt="user profile picture">
                         </div>
-                        <button class="bg-stone-900 hover:bg-stone-800 text-white rounded-full p-2">Change profile picture</button>
                     </div>
                 </div>
                 <div>
