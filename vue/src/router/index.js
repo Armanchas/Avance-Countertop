@@ -7,6 +7,7 @@ import SearchView from "@/views/SearchView.vue";
 import PostView from "@/views/PostView.vue";
 import CookingTipsView from "@/views/CookingTipsView.vue";
 import AccountView from "@/views/AccountView.vue";
+import AdminView from "@/views/AdminView.vue";
 
 
 const router = createRouter({
@@ -51,6 +52,11 @@ const router = createRouter({
 			path: "/account",
 			name: "account",
 			component: AccountView,
+		},
+		{
+			path: "/admin",
+			name: "admin",
+			component: AdminView,
 		}
 
 	],

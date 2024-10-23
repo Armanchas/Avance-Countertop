@@ -8,15 +8,6 @@
       "profile_picture": {
         "url": ""
       }
-    },
-    {
-      "id": "2",
-      "username": "armin",
-      "email": "armin@armin.com",
-      "profile_picture": {
-        "url": ""
-      },
-      "hashed_password": "$2a$10$pCOjVnO2/BqBv3pAqCBZceiYvkI9muHC/5nw2xumkWy3TXVCx.hIK"
     }
   ],
   "recipes": [
