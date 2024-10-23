@@ -1,7 +1,31 @@
 <script setup>
-import { RouterLink } from "vue-router";
+import { RouterLink, useRouter } from "vue-router";
+import { ref, reactive } from "vue";
+import { loginUser } from "@/api/client";
 import RouterButton from "@/components/RouterButton.vue";
 
+const router = useRouter();
+
+const user = reactive({
+	username: "",
+	password: "",
+});
+
+const error = ref();
+
+/**
+ * 
+ * @param event {SubmitEvent}
+ */
+const onSubmit = async (event) => {
+	event.preventDefault();
+	const response = await loginUser(user.username, user.password);
+	console.log(response);
+	if (!response){
+		error.value = "Username or password are incorrect";
+	}
+	router.push("/");
+}
 
 </script>
 
@@ -14,7 +38,7 @@ import RouterButton from "@/components/RouterButton.vue";
 			<div class="flex h-screen items-center justify-around">
 				<h1 class="text-5xl font-bold max-w-96 leading-[60px] text-center">Log into the countertop!</h1>
 				<form
-					class="flex flex-col rounded-3xl border border-stone-900 bg-stone-400 p-5 text-center w-96"
+					@submit="onSubmit" class="flex flex-col rounded-3xl border border-stone-900 bg-stone-400 p-5 text-center w-96"
 				>
 					<h2 class=" pt-3 pb-7 text-2xl font-bold text-white">
 						Log into your account
@@ -26,7 +50,9 @@ import RouterButton from "@/components/RouterButton.vue";
 								class="border border-stone-900 rounded-2xl p-2"
 								placeholder="Username..."
 								type="text"
-								name="username"
+								:name="'username'"
+								v-model="user.username"
+								required
 							/>
 						</div>
 						<div class="flex flex-col py-10">
@@ -35,13 +61,16 @@ import RouterButton from "@/components/RouterButton.vue";
 								class="border border-stone-900 rounded-2xl p-2"
 								placeholder="Password..."
 								type="password"
-								name="password"
+								:name="'password'"
+								v-model="user.password"
+								required
 							/>
 						</div>
 					</div>
-					<div class="flex justify-center items-center">
-						<RouterButton class="w-32" to="/"
-							>Log in</RouterButton
+					<div class="flex flex-col justify-center items-center">
+						<p v-if="error" class="text-red-600">{{ error }}</p>
+						<button type="submit" class="w-32 flex items-center justify-center rounded-full bg-stone-950 px-3 py-2 font-bold text-white transition-colors hover:bg-stone-950/90"
+							>Log in</button
 						>
 					</div>
 					<div class="py-5">

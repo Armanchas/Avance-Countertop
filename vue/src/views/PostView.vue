@@ -1,11 +1,14 @@
 <script setup>
 import { ref, reactive, watch } from 'vue';
 import { postRecipe, uploadFile } from '@/api/client';
+import { useUserStore } from '@/stores/userStore';
 import MainLayout from '@/components/MainLayout.vue';
 import Box from '@/components/Box.vue';
 
+const userStore = useUserStore();
+
 const recipe = reactive({
-    user_id: 1,
+    user_id: '',
     title: '',
     images: {
         main: {
@@ -55,10 +58,6 @@ const removeStep = (index) => {
     recipe.steps.splice(index, 1);
 };
 
-watch(() => {
-    console.log(image.value);
-});
-
 const handleImageUpload = async (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -75,15 +74,17 @@ const handleImageUpload = async (event) => {
 const onSubmit = async (event) => {
     console.log(recipe);
     event.preventDefault();
+    recipe.user_id = userStore.id;
     recipe.images.main = {
         url: image.value,
-        alt: recipe.titrounded-fullle
+        alt: recipe.title
     };
     recipe.images.thumbnail = {
         url: image.value,
         alt: recipe.title
     };
     const recipeData = await postRecipe(recipe);
+    console.log(recipe.user_id);
     console.log(recipeData);
 }
 </script>

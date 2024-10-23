@@ -1,6 +1,9 @@
 <script setup>
 import { RouterLink } from "vue-router";
+import { useUserStore } from "@/stores/userStore";
 import RouterButton from "@/components/RouterButton.vue";
+
+const userStore = useUserStore();
 </script>
 
 <template>
@@ -17,7 +20,12 @@ import RouterButton from "@/components/RouterButton.vue";
 			<RouterLink to="/">Home</RouterLink>
 			<RouterLink to="/search">Browse</RouterLink>
 			<RouterLink to="/post">Post recipe</RouterLink>
-			<RouterButton to="/login">Sign up / Log in</RouterButton>
+			<RouterButton v-if="!userStore.id" to="/login"
+				>Sign up / Log in</RouterButton
+			>
+			<RouterButton v-if="userStore.id" to="/account"
+				>Account</RouterButton
+			>
 		</nav>
 	</header>
 </template>

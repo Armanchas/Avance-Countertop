@@ -1,4 +1,5 @@
 import bcrypt from "bcryptjs";
+import { useUserStore } from "@/stores/userStore";
 
 /**
  * @typedef {Object} User
@@ -198,11 +199,11 @@ export async function postRecipe(recipe) {
 export async function uploadFile(file) {
 
 
-	const res = await fetch(`${import.meta.env.IMAGE_API_URL}/upload`, {
+	const res = await fetch(`${import.meta.env.VITE_IMAGE_API_URL}/upload`, {
 		method: "POST",
 		body: file,
 		headers: {
-			authorization: `Bearer ${import.meta.env.DEPLOYER_API_KEY}`,
+			authorization: `Bearer ${import.meta.env.VITE_DEPLOYER_API_KEY}`,
 		}
 	});
 
@@ -213,7 +214,7 @@ export async function uploadFile(file) {
 
 	const data = await res.json();
 
-	return `${import.meta.env.IMAGE_API_URL}/${data.id}`;
+	return `${import.meta.env.VITE_IMAGE_API_URL}/${data.id}`;
 
 }
 
@@ -302,4 +303,62 @@ export async function getAllUsers() {
 	}
 
 	return data;
+}
+
+export async function getUserByUsername(username) {
+	let res;
+	try {
+		res = await fetch(
+			`${import.meta.env.VITE_API_URL}/users?username=${username}`,
+		);
+	} catch (err) {
+		console.error("Failed to fetch user", err);
+		return null;
+	}
+
+	if (!res.ok) {
+		console.error("Failed to fetch user", res.status, res.statusText);
+		return null;
+	}
+
+	let data;
+	try {
+		data = await res.json();
+	} catch (err) {
+		console.error("Failed to receive and parse JSON", err);
+		return null;
+	}
+	console.log(data);
+
+	return data[0];
+}
+
+export async function loginUser(username, password) {
+
+	const user = await getUserByUsername(username);
+
+	if (!user) {
+		console.error("User not found");
+		return null;
+	}
+
+	if (!bcrypt.compareSync(password, user.hashed_password)) {
+		console.error("Password is incorrect");
+		return null;
+	}
+	
+	const userStore = useUserStore();
+	userStore.$patch({
+		id: user.id,
+		username: user.username,
+		email: user.email
+	})
+
+	localStorage.setItem('userStore', JSON.stringify({
+		id: user.id,
+		username: user.username,
+		email: user.email
+	}))
+
+	return true;
 }

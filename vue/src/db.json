@@ -6,7 +6,7 @@
       "email": "arminhucke@gmail.com",
       "hashed_password": "$2a$10$WCNXOJJZ6LtwOSFICIMesunzaRlYKRW/JyLqL5Y30V56YNCHQy5ge",
       "profile-picture": {
-        "url": "https://arminup.pancho.moe/1b44ad9a4a27206ba9907616e58c81bb"
+        "url": "https://deployer.pancho.moe/1b44ad9a4a27206ba9907616e58c81bb"
       }
     },
     {
@@ -180,137 +180,6 @@
         {
           "order": 6,
           "description": "Slice the cooked chicken and serve on top of the fettuccine. Enjoy!"
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "user_id": 1,
-      "title": "nuclear bomb",
-      "images": {
-        "main": {
-          "url": "https://arminup.pancho.moe/1b44ad9a4a27206ba9907616e58c81bb",
-          "alt": "nuclear bomb"
-        },
-        "thumbnail": {
-          "url": "https://arminup.pancho.moe/1b44ad9a4a27206ba9907616e58c81bb",
-          "alt": "nuclear bomb"
-        }
-      },
-      "categories": [
-        "lunch"
-      ],
-      "cook_time_minutes": 5,
-      "ingredients": [
-        {
-          "name": "uranium",
-          "amount": "2",
-          "measurement": "gram"
-        }
-      ],
-      "instructions": [
-        {
-          "description": "make bomb",
-          "order": 1
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "user_id": 1,
-      "title": "mika",
-      "images": {
-        "main": {
-          "url": "https://arminup.pancho.moe/f5e3a6097d1d7972ee12a8abae859e7e",
-          "alt": "mika"
-        },
-        "thumbnail": {
-          "url": "https://arminup.pancho.moe/f5e3a6097d1d7972ee12a8abae859e7e",
-          "alt": "mika"
-        }
-      },
-      "categories": "Snack",
-      "cook_time_minutes": 10,
-      "ingredients": [
-        {
-          "name": "mika",
-          "amount": "1",
-          "measurement": ""
-        }
-      ],
-      "instructions": [
-        {
-          "description": "mika",
-          "order": 1
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "user_id": 1,
-      "title": "hare",
-      "images": {
-        "main": {
-          "url": "https://arminup.pancho.moe/fd481db70dd7767e1d36cf4794185144",
-          "alt": "hare"
-        },
-        "thumbnail": {
-          "url": "https://arminup.pancho.moe/fd481db70dd7767e1d36cf4794185144",
-          "alt": "hare"
-        }
-      },
-      "categories": "Breakfast",
-      "cook_time_minutes": 0,
-      "ingredients": [
-        {
-          "name": "buzzwords",
-          "amount": "50",
-          "measurement": ""
-        },
-        {
-          "name": "energy drinks",
-          "amount": "20",
-          "measurement": "liter"
-        }
-      ],
-      "instructions": [
-        {
-          "description": "give her energy drinks",
-          "order": 1
-        },
-        {
-          "description": "repeat",
-          "order": 2
-        }
-      ]
-    },
-    {
-      "id": "6",
-      "user_id": 1,
-      "title": "nuclear bomb",
-      "images": {
-        "main": {
-          "url": "https://arminup.pancho.moe/7081970e6a6270bd48c565d641faf0c4",
-          "alt": "nuclear bomb"
-        },
-        "thumbnail": {
-          "url": "https://arminup.pancho.moe/7081970e6a6270bd48c565d641faf0c4",
-          "alt": "nuclear bomb"
-        }
-      },
-      "categories": "Snack",
-      "cook_time_minutes": 5,
-      "ingredients": [
-        {
-          "name": "uranium",
-          "amount": "20",
-          "measurement": "gram"
-        }
-      ],
-      "instructions": [
-        {
-          "description": "assemble bomb",
-          "order": 1
         }
       ]
     }
