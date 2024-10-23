@@ -2,8 +2,21 @@
   "users": [
     {
       "id": "1",
+      "username": "armanchas",
       "email": "arminhucke@gmail.com",
-      "hashed_password": "$2a$10$WCNXOJJZ6LtwOSFICIMesunzaRlYKRW/JyLqL5Y30V56YNCHQy5ge"
+      "hashed_password": "$2a$10$WCNXOJJZ6LtwOSFICIMesunzaRlYKRW/JyLqL5Y30V56YNCHQy5ge",
+      "profile-picture": {
+        "url": "https://arminup.pancho.moe/1b44ad9a4a27206ba9907616e58c81bb"
+      }
+    },
+    {
+      "id": "2",
+      "username": "armin",
+      "email": "armin@armin.com",
+      "profile_picture": {
+        "url": ""
+      },
+      "hashed_password": "$2a$10$pCOjVnO2/BqBv3pAqCBZceiYvkI9muHC/5nw2xumkWy3TXVCx.hIK"
     }
   ],
   "recipes": [
@@ -268,6 +281,36 @@
         {
           "description": "repeat",
           "order": 2
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "user_id": 1,
+      "title": "nuclear bomb",
+      "images": {
+        "main": {
+          "url": "https://arminup.pancho.moe/7081970e6a6270bd48c565d641faf0c4",
+          "alt": "nuclear bomb"
+        },
+        "thumbnail": {
+          "url": "https://arminup.pancho.moe/7081970e6a6270bd48c565d641faf0c4",
+          "alt": "nuclear bomb"
+        }
+      },
+      "categories": "Snack",
+      "cook_time_minutes": 5,
+      "ingredients": [
+        {
+          "name": "uranium",
+          "amount": "20",
+          "measurement": "gram"
+        }
+      ],
+      "instructions": [
+        {
+          "description": "assemble bomb",
+          "order": 1
         }
       ]
     }

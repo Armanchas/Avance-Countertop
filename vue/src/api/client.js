@@ -1,3 +1,5 @@
+import bcrypt from "bcryptjs";
+
 /**
  * @typedef {Object} User
  * @property {number} id
@@ -194,12 +196,14 @@ export async function postRecipe(recipe) {
 }
 
 export async function uploadFile(file) {
-	const formData = new FormData();
-	formData.append("file", file);
 
-	const res = await fetch(`https://arminup.pancho.moe/upload`, {
+
+	const res = await fetch(`${import.meta.env.IMAGE_API_URL}/upload`, {
 		method: "POST",
-		body: formData,
+		body: file,
+		headers: {
+			authorization: `Bearer ${import.meta.env.DEPLOYER_API_KEY}`,
+		}
 	});
 
 	if (!res.ok) {
@@ -209,6 +213,93 @@ export async function uploadFile(file) {
 
 	const data = await res.json();
 
-	return "https://arminup.pancho.moe/" + data.id;
+	return `${import.meta.env.IMAGE_API_URL}/${data.id}`;
 
+}
+
+/**
+ * @param {Recipe} recipe
+ * @returns {Promise<Recipe>}
+ */
+export async function deleteRecipe(recipeId) {
+	const res = await fetch(
+		`${import.meta.env.VITE_API_URL}/recipes/${recipeId}`,
+		{
+			method: "DELETE",
+		},
+	);
+
+	if (!res.ok) {
+		console.error("Failed to delete recipe", res.status, res.statusText);
+		return false;
+	}
+
+	return true;
+}
+
+/**
+ * @param {User} user
+ * @returns {Promise<User>}
+ */
+export async function createUser(user) {
+
+	const lastID = (await getAllUsers()).toSorted((a, b) => b.id - a.id)[0]?.id ?? 0;
+	console.log(lastID);
+	user.id = Number(lastID) + 1;
+	user.id = user.id.toString();
+
+	if (user.password !== user.confirmed_password) {
+		console.error("Passwords do not match");
+		return null;
+	}	
+
+	user.hashed_password = bcrypt.hashSync(user.password, 10);
+
+	delete user.password;
+	delete user.confirmed_password;
+
+	const res = await fetch(`${import.meta.env.VITE_API_URL}/users`, {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+		},
+		body: JSON.stringify(user),
+	});
+
+	if (!res.ok) {
+		console.error("Failed to create user", res.status, res.statusText);
+		return null;
+	}
+
+	const data = await res.json();
+
+	return data;
+}
+
+/**
+ * @returns {Promise<User[]>}
+ */
+export async function getAllUsers() {
+	let res;
+	try {
+		res = await fetch(`${import.meta.env.VITE_API_URL}/users`);
+	} catch (err) {
+		console.error("Failed to fetch users", err);
+		return [];
+	}
+
+	if (!res.ok) {
+		console.error("Failed to fetch users", res.status, res.statusText);
+		return [];
+	}
+
+	let data;
+	try {
+		data = await res.json();
+	} catch (err) {
+		console.error("Failed to receive and parse JSON", err);
+		return [];
+	}
+
+	return data;
 }

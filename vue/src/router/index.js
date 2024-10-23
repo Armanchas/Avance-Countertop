@@ -6,6 +6,7 @@ import RecipeView from "@/views/RecipeView.vue";
 import SearchView from "@/views/SearchView.vue";
 import PostView from "@/views/PostView.vue";
 import CookingTipsView from "@/views/CookingTipsView.vue";
+import AccountView from "@/views/AccountView.vue";
 
 
 const router = createRouter({
@@ -45,6 +46,11 @@ const router = createRouter({
 			path: "/tips",
 			name: "tips",
 			component: CookingTipsView,
+		},
+		{
+			path: "/account",
+			name: "account",
+			component: AccountView,
 		}
 
 	],

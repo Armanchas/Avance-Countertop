@@ -77,7 +77,7 @@ const onSubmit = async (event) => {
     event.preventDefault();
     recipe.images.main = {
         url: image.value,
-        alt: recipe.title
+        alt: recipe.titrounded-fullle
     };
     recipe.images.thumbnail = {
         url: image.value,

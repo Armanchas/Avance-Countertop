@@ -1,6 +1,8 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import RouterButton from "@/components/RouterButton.vue";
+
+
 </script>
 
 <template>
@@ -11,7 +13,7 @@ import RouterButton from "@/components/RouterButton.vue";
 			</div>
 			<div class="flex h-screen items-center justify-around">
 				<h1 class="text-5xl font-bold max-w-96 leading-[60px] text-center">Log into the countertop!</h1>
-				<div
+				<form
 					class="flex flex-col rounded-3xl border border-stone-900 bg-stone-400 p-5 text-center w-96"
 				>
 					<h2 class=" pt-3 pb-7 text-2xl font-bold text-white">
@@ -46,7 +48,7 @@ import RouterButton from "@/components/RouterButton.vue";
 						<p>Don't have an account?</p>
 						<RouterLink to="/register" class=" hover:underline font-medium">You can sign up here!</RouterLink>
 					</div>
-				</div>
+				</form>
 			</div>
 		</div>
 	</main>
