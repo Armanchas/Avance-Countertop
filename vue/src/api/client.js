@@ -362,3 +362,14 @@ export async function loginUser(username, password) {
 
 	return true;
 }
+
+export async function logoutUser() {
+	const userStore = useUserStore();
+	userStore.$patch({
+		id: null,
+		username: null,
+		email: null
+	})
+
+	localStorage.removeItem('userStore');
+}
